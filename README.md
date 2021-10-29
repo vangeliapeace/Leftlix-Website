@@ -3,5 +3,5 @@ Building a front-end website is one of my 4th semester projects for the Human Co
 
 I built this using HTML, CSS and JavaScript to make it interactive and responsive. Enjoy!
 
-❗ There are some of the same designs & wording as Netflix has, I'm more focused on the code that I built. ❗
--- All assets credits to the rightful owner. --
+❗ There are some of the same designs & wording as Netflix has, I'm more focused on the code that I built. ❗ <br>
+<b> -- All assets credits to the rightful owner. -- </b>
