@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letflix | Home</title>
+    <link rel="icon" href="../Assets/link.png">
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="home-style.css">
+    <!-- JQUERY SCRIPT -->
+    <script src="../JQuery.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div id="logo">
+            <img src="../Assets/Letflix.png" alt="Letflix Logo">
+        </div>
+        <div class="menu">
+            <a href="" id="title">Menu </a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../Dramas/drama-cover.html">Dramas</a></li>
+                    <li><a href="../Plans/plans-cover.html">Plan</a></li>
+                    <li><a href="../Subscription/subscription.html">Subscription</a></li>
+                    <li><a href="../About/about.html" id="bottom">About</a></li>
+                </ul>
+           </div>
+        </div>
+    </div>
+
+    <div id="bg">
+        <h2 id="header">Popular on LeTflix</h2>
+        <!-- IMAGE SLIDER FOR THE LATEST FAMOUS DRAMAS -->
+        <div class="content" style="justify-content: center;">
+            <div class="slider-click">
+                <div class="click">
+                     <button id="prev"></button>
+                </div>
+        
+                <div id="slider">
+                    <div id="container">
+                        <img src="../Assets/fix_vincenzo.png" alt="Vincenzo">
+                        <img src="../Assets/fix_ali.png" alt="Ali and Ratu-Ratu Queens">
+                        <img src="../Assets/lupin s2.png" alt="Lupin" class="slideimg">
+                        <img src="../Assets/racket boys.jpeg" alt="Racket Boys">
+                        <img src="../Assets/the day.jpg" alt="The Day of Becoming You">
+                    </div>
+                </div>
+        
+                <div class="click">
+                    <button id="next"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- BENEFITS -->   
+        <p class="content sub">Benefits for you</p>
+        <div class="content bene">
+            <div class="box">
+                <img src="../Assets/no1.png" alt="">
+                <p id="benefits">Tons of movies and series from 100+ countries around the world.</p>
+            </div>
+            <div class="box">
+                <img src="../Assets/no2.png" alt="">
+                <p id="benefits">Allows streaming of 4K with a great audio quality.</p>
+            </div>
+            <div class="box" style="margin-right: 0px;">
+                <img src="../Assets/no3.png" alt="">
+                <p id="benefits">Perfectly original, with no commercial.</p>
+            </div>
+        </div>
+
+        <!-- THE ORIGINALS -->
+        <div class="content">
+            <p class="sub">The originals</p>
+            <a href="#" class="sub" id="end" style="text-decoration: underline;">See All</a>
+        </div>
+
+        <div class="content">
+            <div id="pad"><img src="../Dramas/assets/korean/move to heaven.png" alt="Move To Heaven" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/korean/taxi driver.png" alt="Taxi Driver" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/chinese/my little happiness.png" alt="My Little Happiness" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/france/lupin.png" alt="Lupin Season 2" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/west/fatherhood1.png" alt="Fatherhood" style="width: 100%;"></div>
+            <div><img src="../Dramas/assets/indo/geez and ann.png" alt="Geez dan Ann" style="width: 100%;"></div>
+        </div>
+
+        <p class="content sub" id="near">Suggested for you</p>
+        <div class="content">
+            <div id="pad"><img src="../Dramas/assets/west/lucifer s5.png" alt="Lucifer Season 5" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/korean/penthouse3.png" alt="Penthouse" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/chinese/moonlight.png" alt="Moonlight" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/indo/june dan kopi.png" alt="June dan Kopi" style="width: 100%;"></div>
+            <div id="pad"><img src="../Dramas/assets/france/oxygen.png" alt="Oxygen" style="width: 100%;"></div>
+            <div><img src="../Dramas/assets/west/army of dead.png" alt="Army of Dead" style="width: 100%;"></div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        <div id="textfoot">
+            ©️ LeTflix, by Vangelia Peace Palijama.
+        </div>
+        <div class="contact-us">
+            <p id="textfoot">Contact Us</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/"><img src="../Contact US/insta.png" alt="Instagram"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/"><img src="../Contact US/twitter.png" alt="Twitter"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="../Contact US/facebook.png" alt="Facebook"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/"><img src="../Contact US/email.png" alt="Email"></a>
+        </div>
+    </div>
+
+    <script>
+        let next = $('#next')
+        let prev = $('#prev')
+
+        let container = $('#container')
+        let x = 0
+
+        threshold = 400
+
+        next.on('click', function(){
+            if(x < threshold) {
+                x = x + 100
+            } else {
+                x = 0
+            }
+            container.css({
+                left: -x+'%'
+            })
+
+        })
+
+        prev.on('click', function(){
+            if(x > 0){
+                x = x - 100
+            } else {
+                x = threshold
+            }
+            container.css({
+                left: -x+'%'
+             })
+        })
+    </script>
+</body>
+</html>
